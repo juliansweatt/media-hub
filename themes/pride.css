@@ -1,0 +1,19 @@
+:root {
+    --o1_color: red;
+    --o2_color: orange;
+    --o3_color: rgb(165, 165, 0);
+    --o4_color: green;
+    --o5_color: blue;
+    --o6_color: purple;
+
+    --p1_color: purple;
+    --p2_color: blue;
+    --p3_color: green;
+    --p4_color: rgb(165, 165, 0);
+    --p5_color: orange;
+    --p6_color: red;
+}
+
+body{
+    background-color: white;
+}

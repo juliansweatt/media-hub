@@ -1,0 +1,19 @@
+:root {
+    --o1_color: white;
+    --o2_color: white;
+    --o3_color: white;
+    --o4_color: white;
+    --o5_color: white;
+    --o6_color: white;
+
+    --p1_color: grey;
+    --p2_color: grey;
+    --p3_color: grey;
+    --p4_color: grey;
+    --p5_color: grey;
+    --p6_color: grey;
+}
+
+body{
+    background-color: black;
+}

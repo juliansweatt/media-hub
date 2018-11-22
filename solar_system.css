@@ -1,0 +1,379 @@
+/* Settings */
+:root{
+    /* Things You Should Change */
+    --center_size: 12vmin;
+    --border_size: calc(.45 * var(--center_size));
+    --base-speed: 10s;
+
+    /* Things You Should ~ NOT ~ Change */
+    --o1_size: calc(2*var(--center_size));
+    --o2_size: calc(3*var(--center_size));
+    --o3_size: calc(4*var(--center_size));
+    --o4_size: calc(5*var(--center_size));
+    --o5_size: calc(6*var(--center_size));
+    --o6_size: calc(7*var(--center_size));
+    
+    --p1_speed: calc(var(--base-speed));
+    --p2_speed: calc(10s + var(--base-speed));
+    --p3_speed: calc(5s + var(--base-speed));
+    --p4_speed: calc(4s + var(--base-speed));
+    --p5_speed: calc(6s + var(--base-speed));
+    --p6_speed: calc(8s + var(--base-speed));
+}
+
+/* Classes */
+.centered 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.anchor_planet
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(-0.5 * var(--border_size));
+    margin-left: calc(-0.5 * var(--border_size));
+    background-size: contain;
+    cursor:pointer;
+}
+
+.ring {
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: transparent;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    -o-transition: all ease 1s;
+    transition: all ease 1s;
+    border: var(--border_size) solid transparent;
+}
+
+/* Center of Orbit Specifications */
+#center {
+    width: calc(var(--center_size)*1.5);
+    height: calc(var(--center_size)*1.5);
+    z-index: 1000;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: url(JulianLogo.svg);
+    background-size: contain;
+    border: 0px solid transparent;
+}
+
+#center:hover ~ #orbit1 {
+    border: var(--border_size) solid var(--o1_color);
+}
+#center:hover ~ #orbit2 {
+    border: var(--border_size) solid var(--o2_color);
+}
+#center:hover ~ #orbit3 {
+    border: var(--border_size) solid var(--o3_color);
+}
+#center:hover ~ #orbit4 {
+    border: var(--border_size) solid var(--o4_color);
+}
+#center:hover ~ #orbit5{
+    border: var(--border_size) solid var(--o5_color);
+}
+#center:hover ~ #orbit6 {
+    border: var(--border_size) solid var(--o6_color);
+}
+
+#center:hover ~ #planet1 {
+    animation-play-state: paused;
+}
+#center:hover ~ #planet2 {
+    animation-play-state: paused;
+}
+#center:hover ~ #planet3 {
+    animation-play-state: paused;
+}
+#center:hover ~ #planet4 {
+    animation-play-state: paused;
+}
+#center:hover ~ #planet5{
+    animation-play-state: paused;
+}
+#center:hover ~ #planet6 {
+    animation-play-state: paused;
+}
+
+/* Orbit Ring Specifications */
+#orbit1 {
+    width: var(--o1_size);
+    height: var(--o1_size);
+    z-index: 10;
+    animation: welcome_o1 2s 1;
+}
+
+#orbit1:hover {
+    border: var(--border_size) solid var(--o1_color);
+}
+
+#orbit2 {
+    width: var(--o2_size);
+    height: var(--o2_size);
+    z-index: 9;
+    animation: welcome_o2 2s 1;
+    animation-delay: .25s;
+}
+
+#orbit2:hover {
+    border: var(--border_size) solid var(--o2_color);
+}
+
+#orbit3 {
+    width: var(--o3_size);
+    height: var(--o3_size);
+    z-index: 8;
+    animation: welcome_o3 2s 1;
+    animation-delay: .5s;
+}
+
+#orbit3:hover {
+    border: var(--border_size) solid var(--o3_color);
+}
+
+#orbit4 {
+    width: var(--o4_size);
+    height: var(--o4_size);
+    z-index: 7;
+    animation: welcome_o4 2s 1;
+    animation-delay: .75s;
+}
+
+#orbit4:hover {
+    border: var(--border_size) solid var(--o4_color);
+}
+
+#orbit5 {
+    width: var(--o5_size);
+    height: var(--o5_size);
+    z-index: 6;
+    animation: welcome_o5 2s 1;
+    animation-delay: 1s;
+}
+
+#orbit5:hover {
+    border: var(--border_size) solid var(--o5_color);
+}
+
+#orbit6 {
+    width: var(--o6_size);
+    height: var(--o6_size);
+    z-index: 5;
+    animation: welcome_o6 2s 1;
+    animation-delay: 1.25s;
+}
+
+#orbit6:hover {
+    border: var(--border_size) solid var(--o6_color);
+}
+
+/* Orbit Rings Welcome Ripple Animation */
+@keyframes welcome_o1 {
+    0%{
+        border: var(--border_size) solid transparent;
+    }
+    50%{
+        border: var(--border_size) solid var(--o1_color);
+    }
+    100%{
+        border: var(--border_size) solid transparent;
+    }
+}
+
+@keyframes welcome_o2 {
+    0%{
+        border: var(--border_size) solid transparent;
+    }
+    50%{
+        border: var(--border_size) solid var(--o2_color);
+    }
+    100%{
+        border: var(--border_size) solid transparent;
+    }
+}
+
+@keyframes welcome_o3 {
+    0%{
+        border: var(--border_size) solid transparent;
+    }
+    50%{
+        border: var(--border_size) solid var(--o3_color);
+    }
+    100%{
+        border: var(--border_size) solid transparent;
+    }
+}
+
+@keyframes welcome_o4 {
+    0%{
+        border: var(--border_size) solid transparent;
+    }
+    50%{
+        border: var(--border_size) solid var(--o4_color);
+    }
+    100%{
+        border: var(--border_size) solid transparent;
+    }
+}
+
+@keyframes welcome_o5 {
+    0%{
+        border: var(--border_size) solid transparent;
+    }
+    50%{
+        border: var(--border_size) solid var(--o5_color);
+    }
+    100%{
+        border: var(--border_size) solid transparent;
+    }
+}
+
+@keyframes welcome_o6 {
+    0%{
+        border: var(--border_size) solid transparent;
+    }
+    50%{
+        border: var(--border_size) solid var(--o6_color);
+    }
+    100%{
+        border: var(--border_size) solid transparent;
+    }
+}
+
+/* Planet Specifications */
+#planet1 {
+    width: var(--border_size);
+    height: var(--border_size);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: url(yelp.svg);
+    background-color: var(--p1_color);
+    z-index: 100000;
+    animation: orbit_p1 var(--p1_speed) linear infinite;
+}
+
+#planet1:hover{
+    animation-play-state: paused;
+}
+
+#planet2 {
+    width: var(--border_size);
+    height: var(--border_size);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: url(instagram.svg);
+    background-color: var(--p2_color);
+    z-index: 100000;
+    animation: orbit_p2 var(--p2_speed) linear infinite;
+}
+
+#planet2:hover{
+    animation-play-state: paused;
+}
+
+#planet3 {
+    width: var(--border_size);
+    height: var(--border_size);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: url(github.svg);
+    background-color: var(--p3_color);
+    z-index: 100000;
+    animation: orbit_p3 var(--p3_speed) linear infinite;
+}
+
+#planet3:hover{
+    animation-play-state: paused;
+}
+
+#planet4 {
+    width: var(--border_size);
+    height: var(--border_size);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: url(linkedin.svg);
+    background-color: var(--p4_color);
+    z-index: 100000;
+    animation: orbit_p4 var(--p4_speed) linear infinite;
+}
+
+#planet4:hover{
+    animation-play-state: paused;
+}
+
+#planet5 {
+    width: var(--border_size);
+    height: var(--border_size);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: url(youtube.svg);
+    background-color: var(--p5_color);
+    background-size: contain;
+    z-index: 100000;
+    animation: orbit_p5 var(--p5_speed) linear infinite;
+}
+
+#planet5:hover{
+    animation-play-state: paused;
+}
+
+#planet6 {
+    width: var(--border_size);
+    height: var(--border_size);
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: url(twitter.svg);
+    background-color: var(--p6_color);
+    z-index: 100000;
+    animation: orbit_p6 var(--p6_speed) linear infinite;
+}
+
+#planet6:hover{
+    animation-play-state: paused;
+}
+
+/* Planet Orbit Animations */
+@keyframes orbit_p1 {
+    from { transform: rotate(0deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o1_size)/2))) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o1_size)/2))) rotate(360deg); }
+}
+
+@keyframes orbit_p2 {
+    from { transform: rotate(0deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o2_size)/2))) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o2_size)/2))) rotate(-360deg); }
+}
+
+@keyframes orbit_p3 {
+    from { transform: rotate(0deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o3_size)/2))) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o3_size)/2))) rotate(360deg); }
+}
+
+@keyframes orbit_p4 {
+    from { transform: rotate(0deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o4_size)/2))) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o4_size)/2))) rotate(-360deg); }
+}
+
+@keyframes orbit_p5 {
+    from { transform: rotate(0deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o5_size)/2))) rotate(0deg); }
+    to   { transform: rotate(-360deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o5_size)/2))) rotate(360deg); }
+}
+
+@keyframes orbit_p6 {
+    from { transform: rotate(0deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o6_size)/2))) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o6_size)/2))) rotate(-360deg); }
+}
