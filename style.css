@@ -14,7 +14,6 @@
 }
 
 .nav_button {
-    background-color: var(--accent);
     height: 100%;
     width: 4vmax;
 }
@@ -22,6 +21,8 @@
 .nav_option {
     height: 100%;
     cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .nav_option:hover {
@@ -33,6 +34,8 @@
     padding-right:1vmax;
     font-family: Didot;
     font-weight: bold;
+    font-size: 2vh;
+    color: var(--background);
 }
 
 #theme_button:hover ~ #theme_dropdown{
@@ -64,6 +67,7 @@
     right: 0;
     top: var(--header_height);
     z-index: 15;
+    border: 1px solid var(--primary)
 }
 
 #theme_dropdown:hover {
