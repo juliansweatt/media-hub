@@ -1,11 +1,19 @@
-/* Settings */
 :root{
-    /* Things You Should Change */
+    /* Animation Variables */
     --center_size: 12vmin;
     --border_size: calc(.45 * var(--center_size));
     --base-speed: 10s;
+    --ripple-speed: 2s;
+    --ripple-seperation: 0.25s;
 
-    /* Things You Should ~ NOT ~ Change */
+    /* Pre-Execution Calculations */
+    --o1_ripple_delay: calc(0*var(--ripple-seperation));
+    --o2_ripple_delay: calc(1*var(--ripple-seperation));
+    --o3_ripple_delay: calc(2*var(--ripple-seperation));
+    --o4_ripple_delay: calc(3*var(--ripple-seperation));
+    --o5_ripple_delay: calc(4*var(--ripple-seperation));
+    --o6_ripple_delay: calc(5*var(--ripple-seperation));
+
     --o1_size: calc(2*var(--center_size));
     --o2_size: calc(3*var(--center_size));
     --o3_size: calc(4*var(--center_size));
@@ -19,22 +27,26 @@
     --p4_speed: calc(4s + var(--base-speed));
     --p5_speed: calc(6s + var(--base-speed));
     --p6_speed: calc(8s + var(--base-speed));
+
+    --p1_fade_speed: calc(var(--ripple-speed) + var(--o1_ripple_delay) * 2 );
+    --p2_fade_speed: calc(var(--ripple-speed) + var(--o2_ripple_delay) * 2 );
+    --p3_fade_speed: calc(var(--ripple-speed) + var(--o3_ripple_delay) * 2 );
+    --p4_fade_speed: calc(var(--ripple-speed) + var(--o4_ripple_delay) * 2 );
+    --p5_fade_speed: calc(var(--ripple-speed) + var(--o5_ripple_delay) * 2 );
+    --p6_fade_speed: calc(var(--ripple-speed) + var(--o6_ripple_delay) * 2 );
 }
 
 /* Classes */
 .centered 
 {
     position: absolute;
-    top: 50%;
+    top: calc(50% + var(--header_height));
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.anchor_planet
+.planet
 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     margin-top: calc(-0.5 * var(--border_size));
     margin-left: calc(-0.5 * var(--border_size));
     background-size: contain;
@@ -57,11 +69,11 @@
 #center {
     width: calc(var(--center_size)*1.5);
     height: calc(var(--center_size)*1.5);
-    z-index: 1000;
+    z-index: 11;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background: url(JulianLogo.svg);
+    background: url(assets/JulianLogo.svg);
     background-size: contain;
     border: 0px solid transparent;
 }
@@ -109,7 +121,8 @@
     width: var(--o1_size);
     height: var(--o1_size);
     z-index: 10;
-    animation: welcome_o1 2s 1;
+    animation: welcome_o1 var(--ripple-speed) 1;
+    animation-delay: var(--o1_ripple_delay);
 }
 
 #orbit1:hover {
@@ -120,8 +133,8 @@
     width: var(--o2_size);
     height: var(--o2_size);
     z-index: 9;
-    animation: welcome_o2 2s 1;
-    animation-delay: .25s;
+    animation: welcome_o2 var(--ripple-speed) 1;
+    animation-delay: var(--o2_ripple_delay);
 }
 
 #orbit2:hover {
@@ -132,8 +145,8 @@
     width: var(--o3_size);
     height: var(--o3_size);
     z-index: 8;
-    animation: welcome_o3 2s 1;
-    animation-delay: .5s;
+    animation: welcome_o3 var(--ripple-speed) 1;
+    animation-delay: var(--o3_ripple_delay);
 }
 
 #orbit3:hover {
@@ -144,8 +157,8 @@
     width: var(--o4_size);
     height: var(--o4_size);
     z-index: 7;
-    animation: welcome_o4 2s 1;
-    animation-delay: .75s;
+    animation: welcome_o4 var(--ripple-speed) 1;
+    animation-delay: var(--o4_ripple_delay);
 }
 
 #orbit4:hover {
@@ -156,8 +169,8 @@
     width: var(--o5_size);
     height: var(--o5_size);
     z-index: 6;
-    animation: welcome_o5 2s 1;
-    animation-delay: 1s;
+    animation: welcome_o5 var(--ripple-speed) 1;
+    animation-delay: var(--o5_ripple_delay);
 }
 
 #orbit5:hover {
@@ -168,8 +181,8 @@
     width: var(--o6_size);
     height: var(--o6_size);
     z-index: 5;
-    animation: welcome_o6 2s 1;
-    animation-delay: 1.25s;
+    animation: welcome_o6 var(--ripple-speed) 1;
+    animation-delay: var(--o6_ripple_delay);
 }
 
 #orbit6:hover {
@@ -256,10 +269,10 @@
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    background: url(yelp.svg);
+    background: url(assets/social_logos/yelp.svg);
     background-color: var(--p1_color);
-    z-index: 100000;
-    animation: orbit_p1 var(--p1_speed) linear infinite;
+    z-index: 11;
+    animation: orbit_p1 var(--p1_speed) linear infinite, fade_in var(--p1_fade_speed) linear 1;
 }
 
 #planet1:hover{
@@ -272,10 +285,10 @@
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    background: url(instagram.svg);
+    background: url(assets/social_logos/instagram.svg);
     background-color: var(--p2_color);
-    z-index: 100000;
-    animation: orbit_p2 var(--p2_speed) linear infinite;
+    z-index: 11;
+    animation: orbit_p2 var(--p2_speed) linear infinite, fade_in var(--p2_fade_speed) linear 1;
 }
 
 #planet2:hover{
@@ -288,10 +301,10 @@
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    background: url(github.svg);
+    background: url(assets/social_logos/github.svg);
     background-color: var(--p3_color);
-    z-index: 100000;
-    animation: orbit_p3 var(--p3_speed) linear infinite;
+    z-index: 11;
+    animation: orbit_p3 var(--p3_speed) linear infinite, fade_in var(--p3_fade_speed) linear 1;
 }
 
 #planet3:hover{
@@ -304,10 +317,10 @@
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    background: url(linkedin.svg);
+    background: url(assets/social_logos/linkedin.svg);
     background-color: var(--p4_color);
-    z-index: 100000;
-    animation: orbit_p4 var(--p4_speed) linear infinite;
+    z-index: 11;
+    animation: orbit_p4 var(--p4_speed) linear infinite, fade_in var(--p4_fade_speed) linear 1;
 }
 
 #planet4:hover{
@@ -320,11 +333,11 @@
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    background: url(youtube.svg);
+    background: url(assets/social_logos/youtube.svg);
     background-color: var(--p5_color);
     background-size: contain;
-    z-index: 100000;
-    animation: orbit_p5 var(--p5_speed) linear infinite;
+    z-index: 11;
+    animation: orbit_p5 var(--p5_speed) linear infinite, fade_in var(--p5_fade_speed) linear 1;
 }
 
 #planet5:hover{
@@ -337,10 +350,10 @@
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
     border-radius: 100%;
-    background: url(twitter.svg);
+    background: url(assets/social_logos/twitter.svg);
     background-color: var(--p6_color);
-    z-index: 100000;
-    animation: orbit_p6 var(--p6_speed) linear infinite;
+    z-index: 11;
+    animation: orbit_p6 var(--p6_speed) linear infinite, fade_in var(--p6_fade_speed) linear 1;
 }
 
 #planet6:hover{
@@ -376,4 +389,16 @@
 @keyframes orbit_p6 {
     from { transform: rotate(0deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o6_size)/2))) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(calc(calc(var(--border_size)/2) + calc(var(--o6_size)/2))) rotate(-360deg); }
+}
+
+@keyframes fade_in {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }

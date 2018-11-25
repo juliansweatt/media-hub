@@ -1,0 +1,102 @@
+:root {
+    --header_height: 5vh;
+}
+
+/* Navbar */
+#navbar {
+    position: absolute;
+    height: var(--header_height);
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: var(--primary);
+    z-index: 100;
+}
+
+.nav_button {
+    background-color: var(--accent);
+    height: 100%;
+    width: 4vmax;
+}
+
+.nav_option {
+    height: 100%;
+    cursor: pointer;
+}
+
+.nav_option:hover {
+    background-color: var(--accent);
+}
+
+.option_text {
+    padding-left:1vmax;
+    padding-right:1vmax;
+    font-family: Didot;
+    font-weight: bold;
+}
+
+#theme_button:hover ~ #theme_dropdown{
+    display: block;
+}
+
+.nav_icon {
+    height: 100%;
+    width: 100%;
+}
+
+.options {
+    float: right;
+    margin-right: 1vh;
+}
+
+.nav {
+    float: left;
+    margin-left: 1vh;
+}
+
+/* Theme Selector */
+#theme_dropdown
+{
+    display: none;
+    position: absolute;
+    background-color: var(--accent);
+    border-radius: 10px;
+    right: 0;
+    top: var(--header_height);
+    z-index: 15;
+}
+
+#theme_dropdown:hover {
+    display: block;
+}
+
+.theme_option {
+    background-color: var(--accent);
+    z-index: 16;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid var(--background);
+    cursor: pointer;
+}
+
+/* Theme Options */
+#theme_pride
+{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+}
+
+#theme_dark
+{
+    background: black;
+    border-color: white;
+}
+
+#theme_light
+{
+    background: white;
+    border-color: black;
+}
+

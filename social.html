@@ -2,29 +2,41 @@
 <html>
 <head>
   <title>Julian Sweatt | Home</title>
-  <link rel="stylesheet" type="text/css" href="solar_system.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="themes/monochrome_dark.css" id="theme">
+  <link rel="stylesheet" type="text/css" href="solar_system.css" id="social_media">
   <script type="text/javascript" src="theme_manager.js"></script>
 </head>
 <body>
 
-<button onClick="javascript:setTheme('monochrome_light');">Light Theme</button>
-<button onClick="javascript:setTheme('pride');">Pride Theme</button>
+<div id="navbar">
+  <div class="nav nav_button" style="background:transparent"><img class="nav_icon" src="assets/JulianLogo.svg"></div>
+  <div class="nav nav_option" onclick="window.location.href='http://juliansweatt.com/social.html'"><p class="option_text">Social</p></div>
+  <div class="nav nav_option" onclick="window.location.href='http://juliansweatt.com/resumé.html'"><p class="option_text">Resumé</p></div>
+  <div class="options nav_button" id="theme_button"><img class="nav_icon" src="assets/paint.svg"></div>
+  <div id="theme_dropdown">
+    <div class="theme_option" id="theme_pride" onClick="javascript:setTheme('pride');"></div>
+    <div class="theme_option" id="theme_dark" onClick="javascript:setTheme('monochrome_dark');"></div>
+    <div class="theme_option" id="theme_light" onClick="javascript:setTheme('monochrome_light');"></div>
+  </div>
+</div>
 
-<div class="centered ring" id="center"></div>
-<div class="centered ring" id="orbit1"></div>
-<div class="centered ring" id="orbit2"></div>
-<div class="centered ring" id="orbit3"></div>
-<div class="centered ring" id="orbit4"></div>
-<div class="centered ring" id="orbit5"></div>
-<div class="centered ring" id="orbit6"></div>
+<div>
+  <div class="centered ring" id="center"></div>
+  <div class="centered ring" id="orbit1"></div>
+  <div class="centered ring" id="orbit2"></div>
+  <div class="centered ring" id="orbit3"></div>
+  <div class="centered ring" id="orbit4"></div>
+  <div class="centered ring" id="orbit5"></div>
+  <div class="centered ring" id="orbit6"></div>
 
-<div class="anchor_planet" id="planet1" onclick="window.location.href='http://yelp.juliansweatt.com'"></div>
-<div class="anchor_planet" id="planet2" onclick="window.location.href='http://instagram.juliansweatt.com'"></div>
-<div class="anchor_planet" id="planet3" onclick="window.location.href='http://github.juliansweatt.com'"></div>
-<div class="anchor_planet" id="planet4" onclick="window.location.href='http://linkedin.juliansweatt.com'"></div>
-<div class="anchor_planet" id="planet5" onclick="window.location.href='http://youtube.juliansweatt.com'"></div>
-<div class="anchor_planet" id="planet6" onclick="window.location.href='http://twitter.juliansweatt.com'"></div>
+  <div class="centered planet" id="planet1" onclick="window.location.href='http://yelp.juliansweatt.com'"></div>
+  <div class="centered planet" id="planet2" onclick="window.location.href='http://instagram.juliansweatt.com'"></div>
+  <div class="centered planet" id="planet3" onclick="window.location.href='http://github.juliansweatt.com'"></div>
+  <div class="centered planet" id="planet4" onclick="window.location.href='http://linkedin.juliansweatt.com'"></div>
+  <div class="centered planet" id="planet5" onclick="window.location.href='http://youtube.juliansweatt.com'"></div>
+  <div class="centered planet" id="planet6" onclick="window.location.href='http://twitter.juliansweatt.com'"></div>
+</div>
 
 </body>
 </html>

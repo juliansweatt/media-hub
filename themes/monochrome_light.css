@@ -1,19 +1,25 @@
 :root {
-    --o1_color: black;
-    --o2_color: black;
-    --o3_color: black;
-    --o4_color: black;
-    --o5_color: black;
-    --o6_color: black;
+    /* Theme Colors */
+    --background: white;
+    --accent: grey;
+    --primary: black;
 
-    --p1_color: black;
-    --p2_color: black;
-    --p3_color: black;
-    --p4_color: black;
-    --p5_color: black;
-    --p6_color: black;
+    /* Social Media Orbit Colors */
+    --o1_color: var(--primary);
+    --o2_color: var(--primary);
+    --o3_color: var(--primary);
+    --o4_color: var(--primary);
+    --o5_color: var(--primary);
+    --o6_color: var(--primary);
+
+    --p1_color: var(--primary);
+    --p2_color: var(--primary);
+    --p3_color: var(--primary);
+    --p4_color: var(--primary);
+    --p5_color: var(--primary);
+    --p6_color: var(--primary);
 }
 
 body{
-    background-color: white;
+    background-color: var(--background);
 }
