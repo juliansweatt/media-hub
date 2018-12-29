@@ -5,23 +5,40 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="themes/monochrome_light.css" id="theme">
   <link rel="stylesheet" type="text/css" href="solar_system.css" id="social_media">
+  <link rel="stylesheet" type="text/css" href="color-bars.css">
   <script type="text/javascript" src="theme_manager.js"></script>
 </head>
 <body>
 
-<div id="navbar">
+<!-- div id="navbar">
   <div class="nav nav_button" style="background:transparent"><img class="nav_icon" src="assets/JulianLogo.svg"></div>
   <div class="nav nav_option" onclick="window.location.href='http://juliansweatt.com/social.html'"><p class="option_text">Social</p></div>
-  <!--div class="nav nav_option" onclick="window.location.href='http://juliansweatt.com/resume.html'"><p class="option_text">Resume</p></div-->
+  <div class="nav nav_option" onclick="window.location.href='http://juliansweatt.com/resume.html'"><p class="option_text">Resume</p></div>
   <div class="options nav_button" id="theme_button"><img class="nav_icon" src="assets/paint.svg"></div>
   <div id="theme_dropdown">
     <div class="theme_option" id="theme_pride" onClick="javascript:setTheme('pride');"></div>
     <div class="theme_option" id="theme_dark" onClick="javascript:setTheme('monochrome_dark');"></div>
     <div class="theme_option" id="theme_light" onClick="javascript:setTheme('monochrome_light');"></div>
   </div>
+</div -->
+
+<div class="mobile-version">
+  <div class="row">
+    <div class="column" id="col1" onclick="window.location.href='http://yelp.juliansweatt.com'">
+      <div class="label">
+          J<br>
+      </div>
+      <img src="assets/social_logos/yelp.svg">
+    </div>
+    <div class="column" id="col2" onclick="window.location.href='http://instagram.juliansweatt.com'"><div class="label">U</div><img src="assets/social_logos/instagram.svg"></div>
+    <div class="column" id="col3" onclick="window.location.href='http://github.juliansweatt.com'"><div class="label">L</div><img src="assets/social_logos/github.svg"></div>
+    <div class="column" id="col4" onclick="window.location.href='http://linkedin.juliansweatt.com'"><div class="label">I</div><img src="assets/social_logos/linkedin.svg"></div>
+    <div class="column" id="col5" onclick="window.location.href='http://youtube.juliansweatt.com'"><div class="label">A</div><img src="assets/social_logos/youtube.svg"></div>
+    <div class="column" id="col6" onclick="window.location.href='http://twitter.juliansweatt.com'"><div class="label">N</div><img src="assets/social_logos/twitter.svg"></div>
+  </div>
 </div>
 
-<div>
+<div class="desktop-version">
   <div class="centered ring" id="center"></div>
   <div class="centered ring" id="orbit1"></div>
   <div class="centered ring" id="orbit2"></div>
