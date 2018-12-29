@@ -36,10 +36,18 @@
     animation-delay: 0s;
 }
 
+#col1:hover{
+    background-color: #FF6868;
+}
+
 #col2{
     background-color: #FF9618;
     left: calc((100vw/6)*1);
     animation-delay: 0.5s;
+}
+
+#col2:hover{
+    background-color: #FFC25A;
 }
 
 #col3{
@@ -48,10 +56,18 @@
     animation-delay: 1s;
 }
 
+#col3:hover{
+    background-color: #8FFF62;
+}
+
 #col4{
     background-color: #1CEB96;
     left: calc((100vw/6)*3);
     animation-delay: 1.5s;
+}
+
+#col4:hover{
+    background-color: #A6FDFF;
 }
 
 #col5{
@@ -60,10 +76,18 @@
     animation-delay: 2s;
 }
 
+#col5:hover{
+    background-color: #849BFE;
+}
+
 #col6{
     background-color: #8E1CEB;
     left: calc((100vw/6)*5);
     animation-delay: 2.5s;
+}
+
+#col6:hover{
+    background-color: #C684FE;
 }
 
 @keyframes slide-down {
