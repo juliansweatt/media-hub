@@ -1,0 +1,42 @@
+:root {
+    /* Theme Colors */
+    --background: rgb(23, 23, 23);
+    --accent: black;
+    --primary: orange;
+    --accent_acc: rgb(50, 50, 50);
+    --primary_acc: rgb(255, 199, 95);
+
+    /* Social Media Orbit Colors */
+    --o1_color: var(--primary_acc);
+    --o2_color: var(--primary_acc);
+    --o3_color: var(--primary_acc);
+    --o4_color: var(--primary_acc);
+    --o5_color: var(--primary_acc);
+    --o6_color: var(--primary_acc);
+
+    --p1_color: var(--primary);
+    --p2_color: var(--primary);
+    --p3_color: var(--primary);
+    --p4_color: var(--primary);
+    --p5_color: var(--primary);
+    --p6_color: var(--primary);
+
+    /* Social Media Color Bars */
+    --bar1: var(--primary);
+    --bar2: var(--accent);
+    --bar3: var(--primary);
+    --bar4: var(--accent);
+    --bar5: var(--primary);
+    --bar6: var(--accent);
+
+    --bar1_acc: var(--primary_acc);
+    --bar2_acc: var(--accent_acc);
+    --bar3_acc: var(--primary_acc);
+    --bar4_acc: var(--accent_acc);
+    --bar5_acc: var(--primary_acc);
+    --bar6_acc: var(--accent_acc);
+}
+
+body{
+    background-color: var(--background);
+}
