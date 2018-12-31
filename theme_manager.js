@@ -1,4 +1,4 @@
-// Themes: pride, monochrome_dark, monochrome_light
+// Themes: pride, christmas, new_years, monochrome_dark, monochrome_light
 
 function setTheme(newTheme)
 {
@@ -7,12 +7,35 @@ function setTheme(newTheme)
 
 function initialize()
 {
-    let currentMonth = new Date().getMonth();
+    let d = new Date()
+    let currentMonth = d.getMonth();
+    let currentDate = d.getDate();
 
     /***** Theme Months *****/
-    /* Pride Month (June) */
-    if(currentMonth == 5)
+    if(currentMonth == 0)
     {
-        setTheme("pride")
+        if(currentDate == 1)
+        {
+            /* New Years */
+            setTheme("monochrome_light");
+        }
+    }
+    else if(currentMonth == 5)
+    {
+        /* LGBT Pride */
+        setTheme("pride");
+    }
+    else if(currentMonth==11)
+    {
+        if(currentDate <= 25)
+        {
+            /* Christmas */
+            setTheme("christmas");
+        }
+        else if(currentDate == 31)
+        {
+            /* New Years */
+            setTheme("monochrome_light");
+        }
     }
 }
