@@ -1,4 +1,4 @@
-// Themes: pride, christmas, monochrome_dark, monochrome_light
+// Themes: pride, christmas, halloween, monochrome_dark, monochrome_light
 initialize();
 
 function setTheme(newTheme)
@@ -25,6 +25,14 @@ function initialize()
     {
         /* LGBT Pride */
         setTheme("pride");
+    }
+    else if(currentMonth == 6)
+    {
+        if(currentDate == 4)
+        {
+            /* Independence Day */
+            setTheme("independence");
+        }
     }
     else if(currentMonth == 9)
     {
