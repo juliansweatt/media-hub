@@ -14,7 +14,7 @@ initialize();
 
 function setTheme(newTheme)
 {
-    document.getElementById('theme').href = ("themes/" + newTheme + ".css");
+    document.getElementById('theme').href = ("css/themes/" + newTheme + ".css");
     currentTheme = newTheme;
 }
 
