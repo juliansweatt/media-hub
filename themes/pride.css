@@ -1,23 +1,50 @@
 :root {
     /* Theme Colors */
     --background: white;
-    --accent: grey;
-    --primary: black;
+
+    --red: #FF4118;
+    --orange: #FF9618;
+    --green: #8BEB1C;
+    --teal: #1CEB96;
+    --blue: #1C53EB;
+    --purple: #8E1CEB;
+
+    --red_acc: #FF6868;
+    --orange_acc: #FFC25A;
+    --green_acc: #8FFF62;
+    --teal_acc: #A6FDFF;
+    --blue_acc: #849BFE;
+    --purple_acc: #C684FE;
 
     /* Social Media Orbit Colors */
-    --o1_color: red;
-    --o2_color: orange;
-    --o3_color: rgb(165, 165, 0);
-    --o4_color: green;
-    --o5_color: blue;
-    --o6_color: purple;
+    --o1_color: var(--red_acc);
+    --o2_color: var(--orange_acc);
+    --o3_color: var(--green_acc);
+    --o4_color: var(--teal_acc);
+    --o5_color: var(--blue_acc);
+    --o6_color: var(--purple_acc);
 
-    --p1_color: purple;
-    --p2_color: blue;
-    --p3_color: green;
-    --p4_color: rgb(165, 165, 0);
-    --p5_color: orange;
-    --p6_color: red;
+    --p1_color: var(--red);
+    --p2_color: var(--orange);
+    --p3_color: var(--green);
+    --p4_color: var(--teal);
+    --p5_color: var(--blue);
+    --p6_color: var(--purple);
+
+    /* Social Media Color Bars */
+    --bar1: var(--red);
+    --bar2: var(--orange);
+    --bar3: var(--green);
+    --bar4: var(--teal);
+    --bar5: var(--blue);
+    --bar6: var(--purple);
+
+    --bar1_acc: var(--red_acc);;
+    --bar2_acc: var(--orange_acc);;
+    --bar3_acc: var(--green_acc);;
+    --bar4_acc: var(--teal_acc);;
+    --bar5_acc: var(--blue_acc);;
+    --bar6_acc: var(--purple_acc);;
 }
 
 body{

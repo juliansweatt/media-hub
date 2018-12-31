@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Julian Sweatt | Home</title>
+  <title>Julian Sweatt | Social Media</title>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="themes/monochrome_light.css" id="theme">
+  <link rel="stylesheet" type="text/css" href="themes/pride.css" id="theme">
   <link rel="stylesheet" type="text/css" href="solar_system.css" id="social_media">
   <link rel="stylesheet" type="text/css" href="color-bars.css">
   <script type="text/javascript" src="theme_manager.js"></script>
+  <script type="text/javascript">
+    window.onloadstart = initialize();
+  </script>
 </head>
 <body>
-
+<!-- Navigation Bar [Deactivated] -->
 <!-- div id="navbar">
   <div class="nav nav_button" style="background:transparent"><img class="nav_icon" src="assets/JulianLogo.svg"></div>
   <div class="nav nav_option" onclick="window.location.href='http://juliansweatt.com/social.html'"><p class="option_text">Social</p></div>
@@ -22,14 +25,10 @@
   </div>
 </div -->
 
+<!-- Mobile Version (Color Bars) -->
 <div class="mobile-version">
   <div class="row">
-    <div class="column" id="col1" role="link" aria-label="Yelp" onclick="window.location.href='http://yelp.juliansweatt.com'">
-      <div class="label">
-          J<br>
-      </div>
-      <img src="assets/social_logos/yelp.svg">
-    </div>
+    <div class="column" id="col1" role="link" aria-label="Yelp" onclick="window.location.href='http://yelp.juliansweatt.com'"><div class="label">J<br></div><img src="assets/social_logos/yelp.svg"></div>
     <div class="column" id="col2" role="link" aria-label="Instagram" onclick="window.location.href='http://instagram.juliansweatt.com'"><div class="label">U</div><img src="assets/social_logos/instagram.svg"></div>
     <div class="column" id="col3" role="link" aria-label="GitHub" onclick="window.location.href='http://github.juliansweatt.com'"><div class="label">L</div><img src="assets/social_logos/github.svg"></div>
     <div class="column" id="col4" role="link" aria-label="LinkedIn" onclick="window.location.href='http://linkedin.juliansweatt.com'"><div class="label">I</div><img src="assets/social_logos/linkedin.svg"></div>
@@ -38,6 +37,7 @@
   </div>
 </div>
 
+<!-- Desktop Version (Orbitals/Solar System) -->
 <div class="desktop-version">
   <div class="centered ring" id="center"></div>
   <div class="centered ring" id="orbit1"></div>

@@ -4,6 +4,8 @@
     --accent: grey;
     --primary: black;
 
+    --primary_bar: rgb(99, 99, 99);
+
     /* Social Media Orbit Colors */
     --o1_color: var(--primary);
     --o2_color: var(--primary);
@@ -18,6 +20,21 @@
     --p4_color: var(--primary);
     --p5_color: var(--primary);
     --p6_color: var(--primary);
+
+    /* Social Media Color Bars */
+    --bar1: var(--accent);
+    --bar2: var(--primary_bar);
+    --bar3: var(--accent);
+    --bar4: var(--primary_bar);
+    --bar5: var(--accent);
+    --bar6: var(--primary_bar);
+
+    --bar1_acc: var(--primary);
+    --bar2_acc: var(--primary);
+    --bar3_acc: var(--primary);
+    --bar4_acc: var(--primary);
+    --bar5_acc: var(--primary);
+    --bar6_acc: var(--primary);
 }
 
 body{

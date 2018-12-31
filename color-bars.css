@@ -31,63 +31,63 @@
 }
 
 #col1{
-    background-color: #FF4118;
+    background-color: var(--bar1);
     left: calc((100vw/6)*0);
     animation-delay: 0s;
 }
 
 #col1:hover{
-    background-color: #FF6868;
+    background-color: var(--bar1_acc);
 }
 
 #col2{
-    background-color: #FF9618;
+    background-color: var(--bar2);
     left: calc((100vw/6)*1);
     animation-delay: 0.5s;
 }
 
 #col2:hover{
-    background-color: #FFC25A;
+    background-color: var(--bar2_acc);
 }
 
 #col3{
-    background-color: #8BEB1C;
+    background-color: var(--bar3);
     left: calc((100vw/6)*2);
     animation-delay: 1s;
 }
 
 #col3:hover{
-    background-color: #8FFF62;
+    background-color: var(--bar3_acc);
 }
 
 #col4{
-    background-color: #1CEB96;
+    background-color: var(--bar4);
     left: calc((100vw/6)*3);
     animation-delay: 1.5s;
 }
 
 #col4:hover{
-    background-color: #A6FDFF;
+    background-color: var(--bar4_acc);
 }
 
 #col5{
-    background-color: #1C53EB;
+    background-color: var(--bar5);
     left: calc((100vw/6)*4);
     animation-delay: 2s;
 }
 
 #col5:hover{
-    background-color: #849BFE;
+    background-color: var(--bar5_acc);
 }
 
 #col6{
-    background-color: #8E1CEB;
+    background-color: var(--bar6);
     left: calc((100vw/6)*5);
     animation-delay: 2.5s;
 }
 
 #col6:hover{
-    background-color: #C684FE;
+    background-color: var(--bar6_acc);
 }
 
 @keyframes slide-down {
