@@ -1,9 +1,21 @@
-// Themes: pride, christmas, halloween, monochrome_dark, monochrome_light
+var themes = [
+    "christmas", 
+    "halloween", 
+    "independence", 
+    "monochrome_dark", 
+    "monochrome_light", 
+    "pride", 
+    "valentine"
+];
+
+var currentTheme = "pride";
+
 initialize();
 
 function setTheme(newTheme)
 {
     document.getElementById('theme').href = ("themes/" + newTheme + ".css");
+    currentTheme = newTheme;
 }
 
 function initialize()
@@ -19,6 +31,14 @@ function initialize()
         {
             /* New Years */
             setTheme("monochrome_light");
+        }
+    }
+    else if(currentMonth == 1)
+    {
+        if(currentDate <= 14)
+        {
+            /* Valentine's Day */
+            setTheme("valentine");
         }
     }
     else if(currentMonth == 5)
@@ -51,5 +71,19 @@ function initialize()
             /* New Years */
             setTheme("monochrome_light");
         }
+    }
+}
+
+function nextTheme()
+{
+    let currentIndex = themes.indexOf(currentTheme);
+
+    if( currentIndex < themes.length-1 )
+    {
+        setTheme(themes[currentIndex+1]);
+    }
+    else
+    {
+        setTheme(themes[0]);
     }
 }
