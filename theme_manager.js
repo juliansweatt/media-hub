@@ -1,4 +1,5 @@
 // Themes: pride, christmas, new_years, monochrome_dark, monochrome_light
+initialize();
 
 function setTheme(newTheme)
 {
