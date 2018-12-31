@@ -3,10 +3,8 @@
     --center_size: 12vmin;
     --border_size: calc(.45 * var(--center_size));
     --base-speed: 10s;
-    /*--ripple-speed: 2s;
-    --ripple-seperation: 0.25s;*/
-    --ripple-speed: 0s;
-    --ripple-seperation: 0s;
+    --ripple-speed: 2s;
+    --ripple-seperation: 0.25s;
 
     /* Pre-Execution Calculations */
     --o1_ripple_delay: calc(0*var(--ripple-seperation));
